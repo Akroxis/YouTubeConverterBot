@@ -112,7 +112,8 @@ namespace YouTubeConverterBot.Services
             if (update.Message.From?.IsBot == true)
                 return;
             
-            _logger.LogInformation("Сообщение от {UserId}: {Text}", 
+            _logger.LogInformation("\n \n =====> Сообщение от {UserName} ({UserId}): {Text}", 
+                update.Message.From?.Username,
                 update.Message.From?.Id, 
                 update.Message.Text ?? "[без текста]");
             
